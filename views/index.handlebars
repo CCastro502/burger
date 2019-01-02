@@ -5,16 +5,20 @@
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
-    <button>Eat Me</button>
+    <li>
+        <p>{{this.burger_name}} <button type="submit">Eat Me</button></p>
+    </li>
     {{/unless}}
     {{/each}}
 </ul>
-
 <h2>Eaten Burgers</h2>
 
 <ul>
-    {{#each cats}}
+    {{#each burgers}}
     {{#if devoured}}
+    <li>
+        <p>{{this.burger_name}}</p>
+    </li>
     {{/if}}
     {{/each}}
 </ul>
