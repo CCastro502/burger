@@ -16,10 +16,10 @@ $("#create").on("click", function (event) {
     );
 })
 
-$("#devour").on("click", function (event) {
+$(".devour").on("click", function (event) {
     event.preventDefault();
     var burgerID = {
-        id: $("#devour").val()
+        id: $(".devour").val()
     }
     console.log(burgerID);
     $.ajax("/api/burgers/" + burgerID.id, {
